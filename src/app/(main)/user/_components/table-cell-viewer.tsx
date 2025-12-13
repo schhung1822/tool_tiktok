@@ -80,7 +80,7 @@ export function TableCellViewer({ item }: { item: z.infer<typeof userSchema> }) 
             <div className="relative">
               <Avatar className="h-12 w-12 shrink-0 rounded-full ring-2 ring-white/50 shadow-[0_0_12px_rgba(56,189,248,0.65)]">
                 <AvatarImage
-                  src={"@/public/avatars/nghecontent" || undefined}
+                    src="/avatars/nghecontent.jpg"
                   alt={item.name}
                   className="rounded-full object-cover"
                 />

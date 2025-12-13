@@ -8,7 +8,7 @@ export default function Page() {
         <p className="text-center w-[600px] mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id orci ut nunc faucibus pretium. Integer scelerisque magna non massa blandit.
         </p>
-        <hr width="50%" className="mx-auto" />
+          <hr className="w-1/2 mx-auto" />
       </section> <br />
       <section className="space-y-4">
         <div style={{ height: '600px', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>

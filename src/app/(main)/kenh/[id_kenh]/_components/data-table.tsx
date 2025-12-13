@@ -23,7 +23,7 @@ import { DataTableViewOptions } from "@/components/data-table/data-table-view-op
 import { withDndColumn } from "@/components/data-table/table-utils";
 
 import { dashboardColumns } from "./columns";
-import { videolSchema, Video } from "./schema";
+import { videoSchema, Video } from "./schema";
 
 export function DataTable({ data: initialData }: { data: Video[] }) {
   const [data, setData] = React.useState<Video[]>(() => initialData);

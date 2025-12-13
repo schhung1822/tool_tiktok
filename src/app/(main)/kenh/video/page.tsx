@@ -1,5 +1,5 @@
 import { DataTable } from "./_components/data-table";
-import { getVideos, getChannels } from "@/lib/videos";
+import { getVideos } from "@/lib/videos";
 
 export default async function Page() {
   const video = await getVideos();

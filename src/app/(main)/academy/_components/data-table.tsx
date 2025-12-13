@@ -23,10 +23,10 @@ import { DataTableViewOptions } from "@/components/data-table/data-table-view-op
 import { withDndColumn } from "@/components/data-table/table-utils";
 
 import { dashboardColumns } from "./columns";
-import { channelSchema, Channel } from "./schema";
+import { academySchema, Academy } from "./schema";
 
-export function DataTable({ data: initialData }: { data: Channel[] }) {
-  const [data, setData] = React.useState<Channel[]>(() => initialData);
+export function DataTable({ data: initialData }: { data: Academy[] }) {
+  const [data, setData] = React.useState<Academy[]>(() => initialData);
   const columns = withDndColumn(dashboardColumns);
   const table = useDataTableInstance({
     data,

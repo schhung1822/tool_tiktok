@@ -1,6 +1,6 @@
 "use client";
 
-import { BadgeCheck, Link } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { channelSchema } from "./schema";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { getInitials } from "@/lib/utils";
+import Link from "next/link";
 import { SectionCardsView } from "./section-cards-viewer";
 
 // ---- Nhận stats qua props (từ Server/parent) ----
@@ -48,9 +49,8 @@ export function TableCellViewer({
       ? item.create_time.toLocaleDateString("vi-VN")
       : item.create_time;
 
-  // verified có thể là 1 | "1" | true
-  const isVerified =
-    item.verified === 1 || item.verified === "1" || item.verified === true;
+  // verified là number (0 or 1)
+  const isVerified = item.verified === 1;
 
   return (
     <Drawer direction={isMobile ? "bottom" : "right"}>
@@ -139,7 +139,7 @@ export function TableCellViewer({
         </div>
 
         <DrawerFooter>
-          <Button className="w-full cursor-pointer">Xem chi tiết kênh</Button>
+          <Link href={`/kenh/${item.id_kenh}`} className="w-full"> <Button className="w-full cursor-pointer">Xem chi tiết kênh</Button> </Link>
           <DrawerClose asChild>
             <Button variant="outline">Đóng</Button>
           </DrawerClose>

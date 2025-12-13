@@ -1,5 +1,5 @@
 import { DataTable } from "./_components/data-table";
-import { getAcademy, getChannels } from "@/lib/acadamys";
+import { getAcademy } from "@/lib/acadamys";
 
 export default async function Page() {
   const academy = await getAcademy();

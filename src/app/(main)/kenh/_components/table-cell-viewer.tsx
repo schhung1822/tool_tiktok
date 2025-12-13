@@ -51,9 +51,8 @@ export function TableCellViewer({
       ? item.create_time.toLocaleDateString("vi-VN")
       : item.create_time;
 
-  // verified có thể là 1 | "1" | true
-  const isVerified =
-    item.verified === 1 || item.verified === "1" || item.verified === true;
+  // verified là number (0 or 1)
+  const isVerified = item.verified === 1;
 
   return (
     <Drawer direction={isMobile ? "bottom" : "right"}>
